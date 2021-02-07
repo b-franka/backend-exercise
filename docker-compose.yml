@@ -1,0 +1,30 @@
+version: '3'
+services:
+  mock_backend:
+    image: 'mock_backend:latest'
+    build:
+      context: './mock_backend'
+      dockerfile: 'Dockerfile'
+    ports:
+      - '3000:3000'
+  cc-backend:
+    image: 'cc-backend:latest'
+    build:
+      context: './cc-backend'
+    container_name: cc-backend
+    ports:
+    - '8080:8080'
+    depends_on:
+      - postgres
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/postgres
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=sa
+  postgres:
+    image: 'postgres:latest'
+    container_name: postgres
+    ports:
+    - '5432:5432'
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=sa
