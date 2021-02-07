@@ -3,7 +3,6 @@ package com.codecool.backend.service;
 import com.codecool.backend.dto.ProjectDto;
 import com.codecool.backend.entity.Project;
 import com.codecool.backend.repository.ProjectRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,7 +16,6 @@ public class ProjectServiceImpl implements ProjectService {
     private final AvatarService avatarService;
     private final ProjectRepository projectRepository;
 
-    @Autowired
     public ProjectServiceImpl(AvatarService avatarService, ProjectRepository projectRepository) {
         this.avatarService = avatarService;
         this.projectRepository = projectRepository;
