@@ -56,9 +56,15 @@ The initial frontend layout looks the following:
 
 ![alt text](goal.png)  
 
-#### How to start the mock backend:
+#### How to start the mock backend - that does not exist in this repository:
  - native:  
  in mock_data folder run: `npm run mock`
  - docker:  
  in root folder run `docker-compose up -d`
- 
+   
+#### How to start the backend:
+- docker:
+in root folder run `docker-compose up`
+- with mvn:
+needs a postgres db, could be launched with `docker-compose up -d postgres`
+in cc-backend root run `./mvnw spring-boot:run`

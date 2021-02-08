@@ -42,7 +42,7 @@
   Actual:
   - create endpoint to serve fe
   - fix all errors(approx. 300)
-  - create docker image, modify compose file to create db service, backend service but definitely not working
+  - create docker image, modify compose file to create db service, backend service, definitely not working for first try
 
 
 * 10:00 - infinity
@@ -51,7 +51,6 @@
   - create git repo
   - spring data jpa repository for complex queries
   - (unit test)
-  - fix docker container 
   - create an angular component
   
   Actual:
