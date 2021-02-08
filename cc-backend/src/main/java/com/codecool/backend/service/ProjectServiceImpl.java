@@ -3,6 +3,8 @@ package com.codecool.backend.service;
 import com.codecool.backend.dto.ProjectDto;
 import com.codecool.backend.entity.Project;
 import com.codecool.backend.repository.ProjectRepository;
+import com.codecool.backend.service.serviceinterface.AvatarService;
+import com.codecool.backend.service.serviceinterface.ProjectService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -1,4 +1,4 @@
-package com.codecool.backend.service;
+package com.codecool.backend.service.serviceinterface;
 
 public interface AvatarService {
 

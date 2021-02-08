@@ -14,5 +14,9 @@ export class RestService {
     return this._http.get(PROJECT_URL);
   }
 
+  public getTopUserByLocation() {
+    const USER_URL = this.BASE_URL + 'user/avg-xp';
+    return this._http.get(USER_URL);
+  }
 
 }

@@ -11,10 +11,9 @@ import * as lod from 'lodash';
 export class AppComponent implements OnDestroy {
   public dataLoaded: Promise<boolean>;
   public userGroupList;
-  public dataSubscription: Subscription;
 
   constructor(@Inject(RestService) private _restService: RestService) {
-    this.dataSubscription = this._restService.getProjects().subscribe((data: any) => {
+    this._restService.getProjects().subscribe((data: any) => {
       this.userGroupList = data;
       console.log(this.userGroupList);
       this.dataLoaded = Promise.resolve(true);
@@ -22,8 +21,6 @@ export class AppComponent implements OnDestroy {
   }
 
   ngOnDestroy() {
-    this.dataSubscription.unsubscribe();
-    this.dataSubscription = null;
   }
 
   notifyNewSorting(method) {
